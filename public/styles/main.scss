@@ -1,0 +1,249 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: rgba(0, 0, 0, .8);
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body.page-login {
+  background: url('/images/bg_bokeh_blue.jpg') center;
+  background-size: cover;
+}
+
+.page-login-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 100 !important;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+.logo {
+  display: block;
+  margin: 3em;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.section-header {
+  padding-bottom: .75em;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #111;
+}
+
+.section-header h1 {
+  font-size: 1.6em;
+  color: #fff;
+}
+
+.section-body {
+  position: relative;
+}
+
+.page-profile .section-body {
+  padding: .8em;
+}
+
+.page-index .tab-content {
+  background: #fff;
+  height: 250px;
+  overflow: hidden;
+}
+
+.box {
+  background: gray;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+a p {
+  margin: 0 !important;
+}
+
+.tips {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.tips-item {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  background: #16A085;
+  text-align: center;
+  width: 50%;
+}
+
+.tips-item:nth-child(2) {
+  background: #2ABB9B;
+}
+
+.tips-item a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: .8em .8em 1.1em;
+  font-weight: 300;
+}
+
+.tips-item a:hover {
+
+}
+
+.item-figure {
+  height: 70px;
+  width: 70px;
+  float: left;
+  margin-right: 1em;
+}
+
+.status {
+  display: block;
+  padding: .8em 1em;
+  background: #4DAF7C;
+  height: 105px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.status p {
+  margin-bottom: .3em;
+}
+
+.bar {
+  margin-top: .3em;
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, .3);
+}
+
+.bar-progress {
+  background: #E87E04;
+  width: 20%;
+  height: 45px;
+  border-radius: 4px 0 0 4px;
+}
+
+.bar-text {
+  position: absolute;
+  margin: 0 auto;
+  top: 12px;
+  left: 85px;
+}
+
+.list-actions label {
+  font-weight: normal;
+}
+
+.list-actions li,
+.list-inbox li {
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  margin: 0;
+}
+
+.list-actions label,
+.list-inbox a {
+  text-decoration: none;
+  display: block;
+  padding: 1em 1em .85em;
+}
+
+.list-actions .checkbox-title,
+.list-inbox h2 {
+  font-size: 1.2em;
+  margin-bottom: .2em;
+  color: rgba(0, 0, 0, .7);
+}
+
+.list-actions .checkbox-title {
+  margin-left: .3em;
+}
+
+.list-actions .checkbox-desc {
+  display: block;
+  margin-top: .2em;
+}
+
+.list-inbox time {
+  float: right;
+  font-weight: normal;
+  font-size: .8em;
+}
+
+.list-actions .checkbox-title,
+.list-inbox .unread h2 {
+  font-weight: bold;
+}
+
+.list-inbox .unread p {
+  color: rgba(0, 0, 0, .6);
+}
+
+.list-inbox p {
+  color: rgba(0, 0, 0, .5);
+  margin: 0;
+}
+
+.list-actions label:hover,
+.list-inbox a:hover {
+  text-decoration: none;
+  background: rgba(0, 0, 0, .02);
+}
+
+.list-inbox a:hover h2 {
+  color: black;
+}
+
+form li {
+  margin-bottom: .5em;
+}
+
+.game-icon {
+  color: #E87E04;
+  background: #fff;
+  border-radius: 50%;
+  display: block;
+  height: 60px;
+  width: 60px;
+  margin: .3em auto .3em;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, .3);
+}
+
+.game-icon-ribbon {
+  font-size: 2.8em;
+  padding: 3px 12px;
+}
+
+.game-icon-light {
+  font-size: 2.7em;
+  padding: 3px 15px;
+}

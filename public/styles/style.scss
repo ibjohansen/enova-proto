@@ -1,9 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+@import "reset";
 @import "mixins";
 @import "settings";
 @import "typography";
 @import "flex-grid";
 @import "loader";
-@import "buttons";
 @import "google-profile";
+@import "main";
 @import "menu";
+@import "charts";

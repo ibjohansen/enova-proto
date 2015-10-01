@@ -1,139 +1,158 @@
-
-/* nav main */
 .nav-main {
   position: fixed;
+  background-color: #ddd;
   bottom: 0;
   left: -1px;
   right: -1px;
   z-index: 999;
-}
-.nav-main .nav {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-.nav-main .nav li {
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
-  width: 25%;
-}
-.nav-main .btn {
-  margin: 0;
-  border-radius: 0;
-  border: none;
-  color: rgba(0,0,0,.5);
-  padding-bottom: .5em;
-  background-color: #ddd;
-  width: 100%;
-}
-.nav-main .btn:hover,
-.nav-main .btn.active {
-  box-shadow: none;
-  color: rgba(0,0,0,.8);
-}
-.nav-main .btn.active {
-  font-weight: 600;
-}
-.nav-main .nav-icon {
-  display: block;
-  font-size: 2em;
-  line-height: 0;
+
+  & .nav {
+    display: flex;
+
+    & li {
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
+      width: 25%;
+
+      &:first-child img {
+        display: none;
+      }
+
+    }
+
+    & a {
+      text-decoration: none;
+    }
+  }
+
+  & .btn {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    color: rgba(0, 0, 0, .5);
+    padding-bottom: .5em;
+    background-color: #ddd;
+    width: 100%;
+
+    &:hover,
+    &.active {
+      box-shadow: none;
+      color: rgba(0, 0, 0, .8);
+    }
+
+    &.active {
+      font-weight: 600;
+    }
+  }
+
+  & .nav-icon {
+    display: block;
+    font-size: 2em;
+    line-height: 0;
+  }
 }
 
-.nav a {
-  text-align: center;
-}
-
-
-/**/
 .nav-chart {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-}
-.nav-chart li {
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
-  width: 25%;
-  border-right: 1px solid #666;
-}
-.nav-chart li:last-child {
-  border: none;
-}
-.nav-chart a {
-  position: relative;
-  color: #fff;
-  background: -moz-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.9) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.8)), color-stop(100%,rgba(0,0,0,0.9)));
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.9) 100%);
-  background: -o-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.9) 100%);
-  background: -ms-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.9) 100%);
-  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.9) 100%);
-}
-.nav-chart .active a:before {
-  content: "\25bc";
-  font-size: 1.5em;
-  display: block;
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  margin-left: -10px;
-  line-height: 1;
-  color: #fff;
-}
-.nav-chart a:hover,
-.nav-chart .active a {
-  background: -moz-linear-gradient(top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 100%)!important;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.9)), color-stop(100%,rgba(0,0,0,0.8)))!important;
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.8) 100%)!important;
-  background: -o-linear-gradient(top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.8) 100%)!important;
-  background: -ms-linear-gradient(top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.8) 100%)!important;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.8) 100%)!important;
+
+  & li {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    width: 25%;
+    border-right: 1px solid #666;
+  }
+
+  & li:last-child {
+    border: none;
+  }
+
+  & a {
+    position: relative;
+    color: #fff;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(100%, rgba(0, 0, 0, 0.9)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
+  }
+
+  & .active a:before {
+    content: "\25bc";
+    font-size: 1.5em;
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    margin-left: -10px;
+    line-height: 1;
+    color: #fff;
+  }
+
+  & a:hover,
+  & .active a {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.9)), color-stop(100%, rgba(0, 0, 0, 0.8))) !important;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%) !important;
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%) !important;
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%) !important;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%) !important;
+  }
+
+  & .active a {
+    border: solid rgba(255, 255, 255, .1);
+    border-width: 0 1px;
+  }
 }
 
-.nav-chart .active a {
-  border: solid rgba(255,255,255,.1);
-  border-width: 0 1px;
-}
-
-
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   body {
     display: flex;
   }
+
   .nav-main {
     position: static;
     background-color: #ddd;
     -webkit-flex-grow: 1;
     flex-grow: 1;
-    max-width: 220px;
-    width: 20%;
-  }
-  .nav-main .nav {
-    display: block;
+    min-width: 230px;
+    height: 100vh;
 
-  }
-  .nav-main .nav li {
-    width: 100%;
-    display: table-row;
-  }
-  .nav-main .btn {
-    text-align: left;
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 2em;
+    & .nav {
+      padding-top: 50px;
+      display: block;
+    }
+
+    & .nav li:first-child img {
+      display: block;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    & .nav li {
+      width: 100%;
+      display: table-row;
+    }
+
+    & .btn {
+      text-align: left;
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 2em;
+    }
+
+    & .nav-icon {
+      display: inline-block;
+      margin-right: .3em;
+      bottom: -5px;
+      position: relative;
+    }
   }
 
-  .nav-main .nav-icon {
-    display: inline-block;
-    margin-right: .3em;
-    bottom: -5px;
-    position: relative;
-  }
   .nav-chart {
     padding-right: 60%;
     background: #000;
