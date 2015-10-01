@@ -1,50 +1,76 @@
 'use strict';
 
 import React from 'react';
+import {Link} from 'react-router'
 
-export default React.createClass({
+class MenuItem extends React.Component {
+    render() {
+        let linkClasses = this.props.active ? 'active btn' : 'btn';
 
-    displayName: 'app/pages/components/menu.js',
+        return (
+            <li>
+                <Link to={this.props.to} title={this.props.title} className={linkClasses}>
+                    <span className={this.props.spanClasses}/>
+                    {this.props.title}
+                </Link>
+            </li>
+        )
+    }
+}
+
+class MenuList extends React.Component {
+    render() {
+        return (
+            <ul className="nav flex">
+                <li>
+                    <img src="images/enova_logo_150.png" className="xs-hidden" alt="Enova logo"/>
+                </li>
+                <MenuItem active={this.props.location === this.props.menu[0].to} {...this.props.menu[0]}/>
+                <MenuItem active={this.props.location === this.props.menu[1].to} {...this.props.menu[1]}/>
+                <MenuItem active={this.props.location === this.props.menu[2].to} {...this.props.menu[2]}/>
+                <MenuItem active={this.props.location === this.props.menu[3].to} {...this.props.menu[3]}/>
+                <MenuItem active={this.props.location === this.props.menu[4].to} {...this.props.menu[4]}/>
+            </ul>
+        )
+    }
+}
+
+class Menu extends React.Component {
+
+    static defaultProps = {
+
+        menu: [
+            {
+                title: 'Forbruk',
+                spanClasses: 'nav-icon ion-stats-bars',
+                to: '/usage'
+            }, {
+                title: 'Tiltak',
+                spanClasses: 'nav-icon ion-arrow-graph-down-right',
+                to: '/measures'
+            }, {
+                title: 'Utmerkelser',
+                spanClasses: 'nav-icon ion-ribbon-b',
+                to: '/winnings'
+            }, {
+                title: 'Innboks',
+                spanClasses: 'nav-icon ion-ios-chatbubble',
+                to: '/inbox'
+            }, {
+                title: 'Profil',
+                spanClasses: 'nav-icon ion-gear-a',
+                to: '/profile'
+            }
+        ]
+    };
 
     render() {
         return (
             <nav className="nav-main">
-                <ul className="nav flex">
-                    <li>
-                        <img src="images/enova_logo_150.png" className="xs-hidden" alt="Enova logo"/>
-                    </li>
-                    <li>
-                        <a href="index.html" title="Forbruk" className="btn active">
-                            <span className="nav-icon ion-stats-bars"></span>
-                            Forbruk
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tiltak.html" title="Tiltak" className="btn">
-                            <span className="nav-icon ion-arrow-graph-down-right"></span>
-                            Tiltak
-                        </a>
-                    </li>
-                    <li>
-                        <a href="utmerkelser.html" title="Utmerkelser" className="btn">
-                            <span className="nav-icon ion-ribbon-b"></span>
-                            Utmerkelser
-                        </a>
-                    </li>
-                    <li>
-                        <a href="innboks.html" className="btn" title="Innboks">
-                            <span className="nav-icon ion-ios-chatbubble"></span>
-                            Innboks
-                        </a>
-                    </li>
-                    <li>
-                        <a href="profil.html" title="Profil" className="btn">
-                            <span className="nav-icon ion-gear-a"></span>
-                            Profil
-                        </a>
-                    </li>
-                </ul>
+                <MenuList {...this.props}/>
             </nav>
         )
     }
-});
+}
+
+export default Menu;

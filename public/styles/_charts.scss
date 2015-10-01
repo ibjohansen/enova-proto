@@ -19,11 +19,8 @@
 }
 
 .chart-bar {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   align-items: flex-end;
-  -webkit-align-items: flex-end;
   justify-content: space-between;
   height: 300px;
   margin: 1em;
@@ -33,7 +30,6 @@
 }
 
 .chart-bar-item {
-  -webkit-flex-grow: 1;
   flex-grow: 1;
   height: 200px;
   background: red;
@@ -67,15 +63,10 @@
 }
 
 .nav-chart {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
 }
 
 .nav-chart li {
-  -webkit-flex-grow: 1;
   flex-grow: 1;
   width: 25%;
   border-right: 1px solid #666;
@@ -88,11 +79,6 @@
 .nav-chart a {
   position: relative;
   color: #fff;
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(100%, rgba(0, 0, 0, 0.9)));
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
 }
 
@@ -110,11 +96,6 @@
 
 .nav-chart a:hover,
 .nav-chart .active a {
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%) !important;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.9)), color-stop(100%, rgba(0, 0, 0, 0.8))) !important;
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%) !important;
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%) !important;
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%) !important;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%) !important;
 }
 

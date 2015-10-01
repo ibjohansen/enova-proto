@@ -1,0 +1,5 @@
+//using stage:0 for es6 style on react components
+
+{
+  "stage": 0
+}
