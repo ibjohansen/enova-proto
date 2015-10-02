@@ -14,6 +14,8 @@ import Usage from './pages/usage';
 
 const routes = (
     <Router>
+        <Route path="/login" component={Login}/>
+
         <Route path="/" component={App}>
             <Route path="usage" components={{content:Usage}}/>
             <Route path="measures" components={{content:Measures}}/>
